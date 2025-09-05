@@ -17,3 +17,5 @@ res.send("Books updated successfully");
 router.delete("/:id" , (req , res) => {
 res.send("Books deleted successfully");
 });
+
+module.exports = router;
