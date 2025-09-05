@@ -2,20 +2,14 @@ const express = require("express");
 
 const router = express.Router();
 
-router.get("/" , (req , res) => {
-res.send("Books read Successfully");
-});
 
-router.post("/",(req , res ) => {
-res.send("Books created successfully");
-});
 
-router.put("/:id" , (req , res) =>{
-res.send("Books updated successfully");
-});
+router.get("/" ,BooksRead);
 
-router.delete("/:id" , (req , res) => {
-res.send("Books deleted successfully");
-});
+router.post("/",BooksCreate);
+
+router.put("/:id" , BooksUpdate);
+
+router.delete("/:id" , BooksDelete);
 
 module.exports = router;
